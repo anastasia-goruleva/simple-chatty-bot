@@ -1,6 +1,7 @@
 package bot;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class SimpleBot {
     private static final String BOT_NAME = "Anfisa";
@@ -29,5 +30,13 @@ public class SimpleBot {
         final var age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % AGE_RANGE;
 
         System.out.printf("Your age is %d; that's a good time to start programming!\n", age);
+
+        System.out.println("Now I will prove to you that I can count to any number you want.");
+
+        // read a number and count to it here
+        IntStream.rangeClosed(0, scanner.nextInt()).forEach(n -> System.out.printf("%d!\n", n));
+
+        System.out.println("Completed, have a nice day!");
+
     }
 }
